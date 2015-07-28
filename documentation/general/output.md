@@ -1,25 +1,29 @@
 # Output
 
+This field type returns the encrypted value by default.
+
+If `auto_decrypt` is enabled the value will be decrypted by default as well.
+
 ### Decrypted
 
-The decrypted method returns the decrypted value.
+Returns the decrypted value.
 
 ```
 // Twig usage
 {{ entry.example.decrypted }}
 
-// API Usage
+// API usage
 $entry->example->decrypted;
 ```
 
 ### Hash
 
-The hash method returns a secure hash of the **decrypted** value.
+Returns a secure hash of the **decrypted** value.
 
 ```
 // Twig usage
 {{ entry.example.hash }}
 
-// API Usage
+// API usage
 $entry->example->hash;
 ```
