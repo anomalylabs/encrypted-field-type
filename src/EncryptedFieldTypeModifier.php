@@ -31,8 +31,6 @@ class EncryptedFieldTypeModifier extends FieldTypeModifier
     {
         // Workaround for deprecated class in 5.1
         $this->encrypter = app('Illuminate\Encryption\Encrypter');
-
-        parent::__construct($fieldType);
     }
 
     /**
