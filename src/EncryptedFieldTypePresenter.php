@@ -66,4 +66,14 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
 
         return hash($algorithm, $this->decrypted());
     }
+
+    /**
+     * MD5 the value.
+     *
+     * @return string
+     */
+    public function md5()
+    {
+        return $this->hash('md5');
+    }
 }
