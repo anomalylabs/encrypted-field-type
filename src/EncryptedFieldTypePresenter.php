@@ -68,12 +68,32 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * MD5 the value.
+     * Alias for hash('md5')
      *
      * @return string
      */
     public function md5()
     {
         return $this->hash('md5');
+    }
+
+    /**
+     * Alias for hash('sha1')
+     *
+     * @return string
+     */
+    public function sha1()
+    {
+        return $this->hash('sha1');
+    }
+
+    /**
+     * Alias for hash('sha256')
+     *
+     * @return string
+     */
+    public function sha256()
+    {
+        return $this->hash('sha256');
     }
 }
