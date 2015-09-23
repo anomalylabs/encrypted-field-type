@@ -7,7 +7,8 @@
         placeholder="{{ trans(field_type.placeholder) }}"
         type="{{ field_type.config.show_text ? 'text' : 'password' }}"
         {{ field_type.disabled ? 'disabled' }}
-        {{ field_type.readonly ? 'readonly' }}>
+        {{ field_type.readonly ? 'readonly' }}
+        {{ field_type.required ? 'required' }}>
 
 {% if not field_type.config.show_text %}
     <a href="#" data-toggle="text">
