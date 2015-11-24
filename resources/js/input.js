@@ -1,7 +1,7 @@
 $(function () {
 
     // Initialize the encrypted inputs.
-    $('.encrypted-field-type').each(function () {
+    $('.encrypted-field_type').each(function () {
 
         var wrapper = $(this);
 
