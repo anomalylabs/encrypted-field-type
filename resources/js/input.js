@@ -1,11 +1,13 @@
 $(function () {
 
     // Initialize the encrypted inputs.
-    $('.encrypted-field-type').each(function () {
+    $('.encrypted-field_type').each(function () {
 
         var wrapper = $(this);
 
-        wrapper.find('[data-toggle="text"]').click(function () {
+        wrapper.find('[data-toggle="text"]').click(function (e) {
+
+            e.preventDefault();
 
             if (wrapper.find('input').attr('type') == 'password') {
                 wrapper.find('input').attr('type', 'text').focus();
