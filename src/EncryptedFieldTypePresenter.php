@@ -50,7 +50,11 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
             return $value;
         }
 
-        return $this->encrypter->decrypt($value);
+        try {
+            return $this->encrypter->decrypt($value);
+        } catch (\Exception $e) {
+            return $value; // Caution.
+        }
     }
 
     /**
