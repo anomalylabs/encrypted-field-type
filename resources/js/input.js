@@ -1,7 +1,7 @@
 $(function () {
 
     // Initialize the encrypted inputs.
-    $('.encrypted-field_type').each(function () {
+    $('input[data-provides="anomaly.field_type.encrypted"]').each(function () {
 
         var wrapper = $(this);
 

@@ -6,6 +6,7 @@
         value="{{ field_type.presenter.decrypted }}"
         placeholder="{{ trans(field_type.placeholder) }}"
         type="{{ field_type.config.show_text ? 'text' : 'password' }}"
+        {{ html_attributes(field_type.attributes) }}
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}
         {{ field_type.required ? 'required' }}>
