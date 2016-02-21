@@ -8,8 +8,7 @@
         type="{{ field_type.config.show_text ? 'text' : 'password' }}"
         {{ html_attributes(field_type.attributes) }}
         {{ field_type.disabled ? 'disabled' }}
-        {{ field_type.readonly ? 'readonly' }}
-        {{ field_type.required ? 'required' }}>
+        {{ field_type.readonly ? 'readonly' }}>
 
 {% if not field_type.config.show_text %}
     <a href="#" data-toggle="text">
