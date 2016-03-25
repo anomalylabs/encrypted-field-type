@@ -3,10 +3,11 @@ $(function () {
     // Initialize the encrypted inputs.
     $('input[data-provides="anomaly.field_type.encrypted"]').each(function () {
 
-        var wrapper = $(this);
+        var input = $(this);
+        var wrapper = input.closest('div');
 
         wrapper.find('[data-toggle="text"]').click(function (e) {
-
+            
             e.preventDefault();
 
             if (wrapper.find('input').attr('type') == 'password') {
