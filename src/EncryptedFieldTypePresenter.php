@@ -39,7 +39,7 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
      *
      * @return string
      */
-    public function decrypted()
+    public function decrypt()
     {
         if (!$value = $this->object->getValue()) {
             return null;
@@ -55,6 +55,16 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
         } catch (\Exception $e) {
             return $value; // Caution.
         }
+    }
+
+    /**
+     * Alias for decrypt()
+     *
+     * @return string
+     */
+    public function decrypted()
+    {
+        return $this->decrypt();
     }
 
     /**
