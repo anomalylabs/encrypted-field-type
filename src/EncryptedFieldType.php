@@ -26,4 +26,14 @@ class EncryptedFieldType extends FieldType
      * @var string
      */
     protected $inputView = 'anomaly.field_type.encrypted::input';
+
+    /**
+     * The configuration.
+     *
+     * @var array
+     */
+    protected $config = [
+        'show_text'    => false,
+        'auto_decrypt' => false
+    ];
 }

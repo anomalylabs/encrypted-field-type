@@ -61,6 +61,7 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
      * Alias for decrypt()
      *
      * @return string
+     * @deprecated since version 2.0
      */
     public function decrypted()
     {
@@ -78,7 +79,7 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
             return null;
         }
 
-        return hash($algorithm, $this->decrypted());
+        return hash($algorithm, $this->decrypt());
     }
 
     /**
