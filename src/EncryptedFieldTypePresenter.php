@@ -111,4 +111,16 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
     {
         return $this->hash('sha256');
     }
+
+    /**
+     * Return the contextual value.
+     * This is the most basic usable form
+     * of the value for this field type.
+     *
+     * @return string
+     */
+    public function __value()
+    {
+        return $this->decrypt();
+    }
 }
