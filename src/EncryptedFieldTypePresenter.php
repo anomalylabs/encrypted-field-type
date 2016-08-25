@@ -9,7 +9,6 @@ use Illuminate\Encryption\Encrypter;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\EncryptedFieldType
  */
 class EncryptedFieldTypePresenter extends FieldTypePresenter
 {

@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'toggle_text' => 'Toggle text'
+    'toggle_text' => 'Toggle text',
 ];

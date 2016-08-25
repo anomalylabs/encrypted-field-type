@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Valeur encryptée',
-    'description' => 'Type de champs de valeur encryptée.'
+    'description' => 'Type de champs de valeur encryptée.',
 ];

@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\EncryptedFieldType
  */
 class EncryptedFieldType extends FieldType
 {
@@ -34,6 +33,6 @@ class EncryptedFieldType extends FieldType
      */
     protected $config = [
         'show_text'    => false,
-        'auto_decrypt' => false
+        'auto_decrypt' => false,
     ];
 }
