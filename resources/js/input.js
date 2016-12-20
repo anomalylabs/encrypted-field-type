@@ -1,4 +1,4 @@
-$(function () {
+$(document).on('ajaxComplete ready', function () {
 
     // Initialize the encrypted inputs.
     $('input[data-provides="anomaly.field_type.encrypted"]').each(function () {
@@ -10,10 +10,14 @@ $(function () {
             
             e.preventDefault();
 
-            if (wrapper.find('input').attr('type') == 'password') {
-                wrapper.find('input').attr('type', 'text').focus();
+            $(this).find('i')
+                .toggleClass('fa-toggle-on')
+                .toggleClass('fa-toggle-off');
+
+            if (input.attr('type') == 'password') {
+                input.attr('type', 'text').focus();
             } else {
-                wrapper.find('input').attr('type', 'password').focus();
+                input.attr('type', 'password').focus();
             }
 
             return false;

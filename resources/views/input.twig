@@ -12,6 +12,9 @@
 
 {% if not field_type.config.show_text %}
     <a href="#" data-toggle="text">
-        <small>{{ trans('anomaly.field_type.encrypted::input.toggle_text') }}</small>
+        <small>
+            {{ icon('fa fa-toggle-' ~ (field_type.config.show_text ? 'on' : 'off')) }}
+            {{ trans('anomaly.field_type.encrypted::input.show_text') }}
+        </small>
     </a>
 {% endif %}
