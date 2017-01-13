@@ -1,10 +1,12 @@
 $(document).on('ajaxComplete ready', function () {
 
     // Initialize the encrypted inputs.
-    $('input[data-provides="anomaly.field_type.encrypted"]').each(function () {
+    $('input[data-provides="anomaly.field_type.encrypted"]:not([data-initialized])').each(function () {
 
         var input = $(this);
         var wrapper = input.closest('div');
+
+        input.attr('data-initialized', '');
 
         wrapper.find('[data-toggle="text"]').click(function (e) {
             
