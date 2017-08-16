@@ -51,7 +51,7 @@ class EncryptedFieldTypeModifier extends FieldTypeModifier
      */
     public function restore($value)
     {
-        if (array_get($this->fieldType->getConfig(), 'auto_decrypt') === true) {
+        if (!empty($value) && array_get($this->fieldType->getConfig(), 'auto_decrypt') === true) {
             return $this->encrypter->decrypt($value);
         }
 
