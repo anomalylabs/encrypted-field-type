@@ -1,28 +1,25 @@
-$(document).on('ajaxComplete ready', function () {
+(function (window, document) {
 
-    // Initialize the encrypted inputs.
-    $('input[data-provides="anomaly.field_type.encrypted"]:not([data-initialized])').each(function () {
+    let fields = Array.from(
+        document.querySelectorAll('input[data-provides="anomaly.field_type.encrypted"]')
+    );
 
-        var input = $(this);
-        var wrapper = input.closest('div');
+    fields.forEach(function (field) {
 
-        input.attr('data-initialized', '');
+        field.parentElement.querySelector('[data-toggle="text"]').addEventListener('click', function (event) {
 
-        wrapper.find('[data-toggle="text"]').click(function (e) {
-            
-            e.preventDefault();
+            event.target.childNodes[1].classList.toggle('fa-toggle-on');
+            event.target.childNodes[1].classList.toggle('fa-toggle-off');
 
-            $(this).find('i')
-                .toggleClass('fa-toggle-on')
-                .toggleClass('fa-toggle-off');
-
-            if (input.attr('type') == 'password') {
-                input.attr('type', 'text').focus();
+            if (field.getAttribute('type') == 'password') {
+                field.setAttribute('type', 'text');
             } else {
-                input.attr('type', 'password').focus();
+                field.setAttribute('type', 'password');
             }
+
+            field.focus();
 
             return false;
         });
     });
-});
+})(window, document);
