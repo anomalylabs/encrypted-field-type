@@ -8,8 +8,10 @@
 
         field.parentElement.querySelector('[data-toggle="text"]').addEventListener('click', function (event) {
 
-            event.target.querySelector('i').classList.toggle('fa-toggle-on');
-            event.target.querySelector('i').classList.toggle('fa-toggle-off');
+            let indicator = event.target.querySelector('i');
+            
+            indicator.classList.toggle('fa-toggle-on');
+            indicator.classList.toggle('fa-toggle-off');
 
             if (field.getAttribute('type') === 'password') {
                 field.setAttribute('type', 'text');
