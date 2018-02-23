@@ -8,10 +8,12 @@
 
         field.parentElement.querySelector('[data-toggle="text"]').addEventListener('click', function (event) {
 
-            event.target.childNodes[1].classList.toggle('fa-toggle-on');
-            event.target.childNodes[1].classList.toggle('fa-toggle-off');
+            let classList = event.target.querySelector('i').classList;
 
-            if (field.getAttribute('type') == 'password') {
+            classList.toggle('fa-toggle-on');
+            classList.toggle('fa-toggle-off');
+
+            if (field.getAttribute('type') === 'password') {
                 field.setAttribute('type', 'text');
             } else {
                 field.setAttribute('type', 'password');
