@@ -8,6 +8,8 @@
 
         field.parentElement.querySelector('[data-toggle="text"]').addEventListener('click', function (event) {
 
+            event.preventDefault();
+
             let indicator = event.target.querySelector('i');
             
             indicator.classList.toggle('fa-toggle-on');
