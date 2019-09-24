@@ -34,6 +34,17 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
+     * Alias for decrypt()
+     *
+     * @return string
+     * @deprecated since version 2.0
+     */
+    public function decrypted()
+    {
+        return $this->decrypt();
+    }
+
+    /**
      * Decrypt the value.
      *
      * @return string
@@ -57,14 +68,13 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
     }
 
     /**
-     * Alias for decrypt()
+     * Alias for hash('md5')
      *
      * @return string
-     * @deprecated since version 2.0
      */
-    public function decrypted()
+    public function md5()
     {
-        return $this->decrypt();
+        return $this->hash('md5');
     }
 
     /**
@@ -79,16 +89,6 @@ class EncryptedFieldTypePresenter extends FieldTypePresenter
         }
 
         return hash($algorithm, $this->decrypt());
-    }
-
-    /**
-     * Alias for hash('md5')
-     *
-     * @return string
-     */
-    public function md5()
-    {
-        return $this->hash('md5');
     }
 
     /**

@@ -11,7 +11,7 @@
             event.preventDefault();
 
             let indicator = event.target.querySelector('i');
-            
+
             indicator.classList.toggle('fa-toggle-on');
             indicator.classList.toggle('fa-toggle-off');
 
